@@ -1,6 +1,7 @@
 body{
     background-image: url(Images/cubes.svg);
-
+    background-position: center center;
+    background-size: 4%;
 }
 
 #logo{
