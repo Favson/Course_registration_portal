@@ -13,7 +13,13 @@ function eyeicon2(){
 
 
 button.addEventListener('click', (e)=>{
-    if (password || matricNo ==""){
-        
+    if (password ==="" || matricNo ===""){
+        alert("This spaces can't be empty")
     }
 })
+
+function button(){
+    if (password ==="" || matricNo ===""){
+        alert("This spaces can't be empty")
+    }
+}
