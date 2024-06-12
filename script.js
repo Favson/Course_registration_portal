@@ -4,8 +4,11 @@ let eyeicon = document.getElementById('eyeicon')
 function login(){
     let password = document.getElementById('password').value
     let matricNo = document.getElementById('matricNo').value
-    if (password ==="" || matricNo ==="" || matricNo.length > 10){
-        matricPass.style.display='block'; 
+    let matricPass = document.getElementById('matricPass')
+    let matricPass2 = document.getElementById('matricPass2')
+    if (password ==="" || matricNo ==="" || matricNo.length > 10 || matricNo.length < 10){
+        matricPass.style.display='block';
+        matricPass2.style.display='block' ;
     }else{
         console.log("You're in danger")
     }
