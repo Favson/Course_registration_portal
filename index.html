@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Registration Portal</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css"> -->
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
 </head>
 
@@ -19,19 +18,22 @@
         <p class="form-title" id="logo"></p>
         <div class="input-container">
             <label for="matricNo"><p style="line-height:1px;">Matric Number</p></label>
-            <input placeholder="Enter matric number" type="text" id="matricNo">
+            <input placeholder="Enter matric number" type="number" id="matricNo">
+            <p class="matricPass text-danger" style="font-size: smaller; font-weight:600;">The Matric Number Fireld is required</p>
         </div>
         <div class="input-container">
             <label for="password"><b>Password</b></label>
             <input placeholder="Enter password" type="password" id="password">
             <span class="password-toggle-icon" id="eyeiconspan"><i class="fa-solid fa-eye pt-4" id="eyeicon"></i></span>
+            <p class="matricPass text-danger" style="font-size: smaller; font-weight:600;">The Password Field is required</p>
         </div>
-        <button class="submit" type="submit" id="button" onclick="button()">Login</button>
+        <button class="submit" type="button" id="button" onclick="login()">Login</button>
         <p><a href="" style="text-decoration: none; float:right; font-size:small;">Forgot Password?</a></p>
     </form>
 
     <footer class="text-center text-secondary pt-3" style="font-size: small;">Copyright © 2024 LAUTECH ICT. All rights reserved.</footer>
 </body>
-<script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+<!-- <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script> -->
+<script src="script.js"></script>
 
 </html>
