@@ -8,7 +8,7 @@
     <title>Course Registration Portal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css"> -->
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
 </head>
 
@@ -24,7 +24,7 @@
         <div class="input-container">
             <label for="password"><b>Password</b></label>
             <input placeholder="Enter password" type="password" id="password">
-            <span class="password-toggle-icon" id="eyeiconspan"><i class="fa-solid fa-eye pt-4" id="eyeicon"></i></span>
+            <span class="password-toggle-icon" id="eyeiconspan"><i class="fa-solid fa-eye pt-4" onclick="eyeicon()"></i></span>
             <p class="text-danger" id="matricPass2" style="font-size: smaller; font-weight:600;">The Password Field is required</p>
         </div>
         <button class="submit" type="button" id="button" onclick="login()">Login</button>
