@@ -73,7 +73,7 @@ body{
     height: 1rem;
   }
 
-  #matricPass, #matricPass2{
+  #matricPass, #matricPass1, #matricPass2{
     display: none;
   }
   
