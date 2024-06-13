@@ -11,9 +11,12 @@ function login(){
     let matricPattern = /^2023/;
     if (password ==="" || matricNo ==="" || matricNo.length > 10 || matricNo.length < 10 || password > 14){
         matricPass.style.display='block';
-        matricPass2.style.display='block' ;
+        matricPass2.style.display='block';
+        matricPass1.style.display='none'
     }else if (!matricPattern.test(matricNo)){
         matricPass1.style.display='block'
+        matricPass.style.display='none';
+        matricPass2.style.display='none';
     } else{
         matricPass.style.display='none';
         matricPass2.style.display='none';
