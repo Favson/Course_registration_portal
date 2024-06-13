@@ -17,7 +17,7 @@
 
         .form-container {
             margin-top: 150px;
-            max-width: 300px;
+            max-width: 318px;
             background-color: #fff;
             padding: 32px 24px;
             font-size: 14px;
@@ -27,8 +27,8 @@
             flex-direction: column;
             gap: 20px;
             box-sizing: border-box;
-            border-radius: 10px;
-            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+            border-radius: 13px;
+            border:none
         }
 
         .form-container button:active {
@@ -80,7 +80,7 @@
             align-items: center;
             font-family: inherit;
             color: #fff;
-            background-color: #212121;
+            background-color:#d9241c;
             border: none;
             width: 100%;
             padding: 12px 16px;
@@ -89,11 +89,11 @@
             margin: 12px 0;
             cursor: pointer;
             border-radius: 6px;
-            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+            box-shadow: 0px 0px 3px rgba(217,36,28, 0.084), 0px 2px 3px rgba(217,36,28, 0.168);
         }
 
         .form-container .form-submit-btn:hover {
-            background-color: #313131;
+            background-color:#f53159;
         }
 
         .form-container .link {
@@ -113,22 +113,25 @@
         .form-container .link:hover {
             text-decoration: underline;
         }
+   
     </style>
 </head>
 
 <body>
-    <div class="form-container mx-auto">
-        <div class="logo-container">
+    <div class="form-container mx-auto col-sm-12 col-md-12 col-lg-12;">
+        <div class="logo-container" style="margin-bottom: -20px; font-weight:700;">
             Forgot Password
+            <hr class="text-secondary">
         </div>
 
         <form class="form">
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter your email" required="">
+                <label for="email" style="font-weight: 700;">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required="" aria-describedby="email-error" class="shadow ">
+                <strong id="email-error" class="text-danger">The email field is required.</strong>
             </div>
 
-            <button class="form-submit-btn" type="submit">Send Email</button>
+            <button class="form-submit-btn " type="submit">Send Reset Link</button>
         </form>
 
         <p class="signup-link">
