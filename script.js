@@ -22,14 +22,16 @@ function login(){
 
     }
 }
-let passwordfield= document.getElementById('password').value
-function eyeicon(){
-    document.getElementById('eyeiconspan').innerHTML=`<i class="fa-solid fa-eye-slash pt-4" onclick='eyeicon2()'></i>`
-    const type = pass
-    // document.getElementById('eyeiconspan').innerHTML=''
-}
 
-function eyeicon2(){
-    document.getElementById('eyeiconspan').innerHTML=`<i class="fa-solid fa-eye pt-4" onclick="eyeicon()"></i>`
-}
-
+document.getElementById('eyeiconspan').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+    
+    // Toggle the type attribute
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+    
+    // Toggle the eye icon
+    eyeIcon.classList.toggle('fa-eye');
+    eyeIcon.classList.toggle('fa-eye-slash');
+});
