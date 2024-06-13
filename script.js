@@ -25,7 +25,6 @@ function login(){
 
     }
 }
-
 document.getElementById('eyeiconspan').addEventListener('click', function () {
     const passwordField = document.getElementById('password');
     const eyeIcon = document.getElementById('eyeIcon');
@@ -38,3 +37,17 @@ document.getElementById('eyeiconspan').addEventListener('click', function () {
     eyeIcon.classList.toggle('fa-eye');
     eyeIcon.classList.toggle('fa-eye-slash');
 });
+
+
+//Reset Script.js
+function submit() {
+    let email = document.getElementById('email').value
+    let emailError = document.getElementById('emailError');
+    let emailPattern = /@student.lautech.edu.ng/;
+   if(email ===''){
+    emailError.style.display='block'
+    console.log('error');
+   }else{
+    console.error("Go abck to school");
+   }
+}
