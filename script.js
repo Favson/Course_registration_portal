@@ -3,17 +3,20 @@ function login(){
     setTimeout(() => {
         button.innerHTML="Login"
     }, 2000);
-    let password = document.getElementById('password').value
+    let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238,]
+    let password = document.getElementById('password')
     let matricNo = document.getElementById('matricNo').value
     let matricPass1 = document.getElementById('matricPass1')
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
-    if (password ==="" || matricNo ==="" || matricNo.length > 10 || matricNo.length < 10 || password > 14){
+    if (password.value ==="" || matricNo ==="" || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
-    }else if (!matricPattern.test(matricNo)){
+        password.value=''
+    }else if (!matricPattern.test(matricNo) || studentMatric){
+        password.innerHTML=" "
         matricPass1.style.display='block'
         matricPass.style.display='none';
         matricPass2.style.display='none';
