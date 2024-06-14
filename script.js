@@ -1,10 +1,10 @@
+let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028,]
 function login(){
     button.innerText=`Processing...` 
     setTimeout(() => {
         button.innerHTML="Login"
     }, 2000);
-    let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238,]
-    let password = document.getElementById('password')
+    let password = document.getElementById('password').value
     let matricNo = document.getElementById('matricNo').value
     let matricPass1 = document.getElementById('matricPass1')
     let matricPass = document.getElementById('matricPass')
@@ -14,9 +14,9 @@ function login(){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
-        password.value=''
+        document.getElementById('password').value=""
     }else if (!matricPattern.test(matricNo) || studentMatric){
-        password.innerHTML=" "
+        document.getElementById('password').value=""
         matricPass1.style.display='block'
         matricPass.style.display='none';
         matricPass2.style.display='none';
@@ -24,6 +24,7 @@ function login(){
         matricPass.style.display='none';
         matricPass2.style.display='none';
         matricPass1.style.display='none'
+        items.push(matricNo.value)
         console.log("You're in danger")
 
     }
