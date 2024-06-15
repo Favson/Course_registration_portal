@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student | Home</title>
     <link rel="shortcut icon" href="Images/laulogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
@@ -48,11 +48,45 @@
         .slideOut{
             background-color:#f8f9fa;
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 100px;
+        }
+        
+        .buttonDiv{
+            padding-right: 10px;
+        }
+        
+        .btn{            
+            margin-left: 10px;
+            width: 100%;
         }
 
-        .btn{
+        .btns1{
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px;
+            font-weight: 400;
+        }
+
+        .btns{
             background-color: #f8f9fa;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px;
+            font-weight: 400;
+        }
+        .btns:hover{
+            background-color:#f0f0f0;
+        }
+
+        .imageSpan{
+            border: white 5px solid;
+            margin-top: -100px;
+            margin-left:43%;
+            width:14%;
+            border-radius:50%;
+            height:20vh;
         }
         @media (max-width: 576px) {
             .arrowDiv {
@@ -98,37 +132,42 @@
     <!-- Nav Bar Ends -->
     <!-- To the Body -->
     <main class="row">
-        <div class="slideOut">
-            <div>
-                <small class="btn">Dashboard</small>
+        <div class="slideOut col-md-2 col-lg-2">
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns1">Dashboard</button></a>
             </div>
-            <div>
-                <small class="btn">Change Password</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Change Password</button></a>
             </div>
-            <div>
-                <small class="btn">Lautech Email</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Lautech Email</button></a>
             </div>
-            <div>
-                <small class="btn">Course Registration</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Course Registration</button></a>
             </div>
-            <div>
-                <small class="btn">Payments</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Payments</button></a>
             </div>
-            <div>
-                <small class="btn">Classmates</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Classmates</button></a>
             </div>
-            <div>
-                <small class="btn">Check Result</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Check Result</button></a>
             </div>
-            <div>
-                <small class="btn">Support Tickets</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">Support Tickets</button></a>
             </div>
-            <div>
-                <small class="btn">FAQs</small>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns">FAQs</button></a>
             </div>
         </div>
-        <div>
-
+        <div class="col-md-10 col-lg-10">
+            <div class="w-75 mx-auto" style=" padding-top:40px">
+                <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px; height:25vh">
+                <div style="border: white;"><img src="Images/mypic.jpg" alt="" class="imageSpan">
+                <span class="spanActive"></span> 
+                </div>
+            </div>
         </div>
     </main>
 </body>
