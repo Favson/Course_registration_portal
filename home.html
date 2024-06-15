@@ -88,6 +88,10 @@
             border-radius:50%;
             height:20vh;
         }
+
+        @media screen {
+            
+        }
         @media (max-width: 576px) {
             .arrowDiv {
                 width: 40px;
@@ -96,6 +100,17 @@
 
             .imageRightTop {
                 height: 40px;
+            }
+
+            .slideOut{
+                width:50%;
+                display: none;
+                position: relative;
+                z-index:1;
+            }
+            .nameDIv{
+                position: absolute;
+                margin-right:50px;
             }
 
             .spanActive {
@@ -121,7 +136,7 @@
             <form class="d-flex align-items-center">
                 <img src="Images/logo.png" class="img-fluid" id="imgRightTop" alt="" style="height: 50px; padding-left: 20px;">
                 <img src="Images/laulogo.png" alt="" class="img-fluid" id="imgRightTop1" alt="" style="height: 50px; padding-left: 20px;">
-                <div class="arrowDiv mx-2"></div>
+                <div class="arrowDiv mx-2 text-white btn" onclick="arrowDiv()">Clck</div>
             </form>
             <div class="rightImage">
                 <img src="Images/mypic.jpg" alt="" class="imageRightTop img-fluid">
@@ -132,7 +147,7 @@
     <!-- Nav Bar Ends -->
     <!-- To the Body -->
     <main class="row">
-        <div class="slideOut col-md-2 col-lg-2">
+        <div id="slideOut" class="slideOut col-md-2 col-lg-2">
             <div class="buttonDiv">
                 <a class="btn"><button class="btns1">Dashboard</button></a>
             </div>
@@ -161,8 +176,8 @@
                 <a class="btn"><button class="btns">FAQs</button></a>
             </div>
         </div>
-        <div class="col-md-10 col-lg-10">
-            <div class="w-75 mx-auto" style=" padding-top:40px">
+        <div class="nameDIv col-md-10 col-sm-12 col-lg-10">
+            <div class="w-md-75 w-sm-100 mx-auto" style=" padding-top:40px">
                 <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px; height:25vh">
                 <div style="border: white;"><img src="Images/mypic.jpg" alt="" class="imageSpan">
                 <span class="spanActive"></span> 
@@ -173,4 +188,11 @@
 </body>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 
+<script>
+    function arrowDiv(){
+        let nameDIv = document.getElementById('nameDIv')
+        let slideOut = document.getElementById('slideOut')
+        slideOut.style.display='block'
+    }
+</script>
 </html>
