@@ -1,10 +1,10 @@
 //TimeShow
-function uxzpdateGMTTime() {
+function updateGMTTime() {
     const timeDateInNigeria = new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
-    dateshow.innerHTML=(timeDateInNigeria);
-  }
-  setInterval(updateGMTTime, 1000);
-  
+    dateTimeDisplay.innerHTML=(timeDateInNigeria);
+}
+setInterval(updateGMTTime, 1000);
+
 let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239]
 
 //The Login Button

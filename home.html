@@ -89,7 +89,7 @@
             height:20vh;
         }
 
-        @media screen {
+        @media (max-width: 767px) {
             
         }
         @media (max-width: 576px) {
@@ -149,7 +149,7 @@
     <main class="row">
         <div id="slideOut" class="slideOut col-md-2 col-lg-2">
             <div class="buttonDiv">
-                <a class="btn"><button class="btns1">Dashboard</button></a>
+                <a class="btn" href="home.html"><button class="btns1">Dashboard</button></a>
             </div>
             <div class="buttonDiv">
                 <a class="btn"><button class="btns">Change Password</button></a>
@@ -176,8 +176,9 @@
                 <a class="btn"><button class="btns">FAQs</button></a>
             </div>
         </div>
-        <div class="nameDIv col-md-10 col-sm-12 col-lg-10">
-            <div class="w-md-75 w-sm-100 mx-auto" style=" padding-top:40px">
+        <div class="nameDIv col-md-10 col-sm-12 col-lg-10" onclick="nameDiv()">
+            <p id="dateTimeDisplay" class="pt-3 text-" style="margin-bottom: -15px;"></p>
+            <div class="w-md-75 w-sm-100 mx-auto" style=" padding-top:25px">
                 <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px; height:25vh">
                 <div style="border: white;"><img src="Images/mypic.jpg" alt="" class="imageSpan">
                 <span class="spanActive"></span> 
@@ -187,12 +188,16 @@
     </main>
 </body>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
-
+<script src="script.js"></script>
 <script>
+    let slideOut = document.getElementById('slideOut')
     function arrowDiv(){
         let nameDIv = document.getElementById('nameDIv')
-        let slideOut = document.getElementById('slideOut')
-        slideOut.style.display='block'
+        slideOut.style.display==='block'? 'none':'block';
+    }
+
+    function nameDiv(){
+        slideOut.style.display='none' 
     }
 </script>
 </html>
