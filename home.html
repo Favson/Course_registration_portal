@@ -12,6 +12,7 @@
 
     <style>
         .arrowDiv {
+            display: none !important;
             border: 2px solid #132144;
             background-color: #132144;
             border-radius: 50%;
@@ -96,6 +97,7 @@
             .arrowDiv {
                 width: 40px;
                 height: 40px;
+                display: block !important;
             }
 
             .imageRightTop {
@@ -193,11 +195,11 @@
     let slideOut = document.getElementById('slideOut')
     function arrowDiv(){
         let nameDIv = document.getElementById('nameDIv')
-        slideOut.style.display==='block'? 'none':'block';
+        slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
     }
 
     function nameDiv(){
-        slideOut.style.display='none' 
+        //slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
     }
 </script>
 </html>
