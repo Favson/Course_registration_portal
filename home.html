@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="Images/laulogo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/laulogo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
@@ -15,54 +15,122 @@
             border: 2px solid #132144;
             background-color: #132144;
             border-radius: 50%;
-            width: 5%;
-            height: 6vh;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .rightImage {
-            border-radius: 50%;
-            width: 7%;
-            padding-right: 50px;
-            margin: auto 0px;
             display: flex;
+            align-items: center;
+            padding-right: 20px;
         }
-
+        #imgRightTop1{
+            display: none;
+        }
         .imageRightTop {
             border-radius: 50%;
-            height: 7vh;
+            height: 50px;
         }
 
         .spanActive {
             border: white 1px solid;
             border-radius: 50%;
             background-color: limegreen;
-            width: 25%;
-            height: 1.5vh;
-            margin-top: 35px;
-            margin-left: -16px;
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 15px;
+            left:-12px;
+        }
+        .slideOut{
+            background-color:#f8f9fa;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .btn{
+            background-color: #f8f9fa;
+        }
+        @media (max-width: 576px) {
+            .arrowDiv {
+                width: 40px;
+                height: 40px;
+            }
+
+            .imageRightTop {
+                height: 40px;
+            }
+
+            .spanActive {
+                width: 10px;
+                height: 10px;
+                top: -10px;
+                left: -8px;
+            }
+            #imgRightTop{
+                display: none;
+            }
+            #imgRightTop1{
+                display: block;
+            }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary" style="width: 100%;">
-        <div class="container-fluid navbar-nav-wrap-content-start W-100">
-            <div class="d-flex">
-                <img src="Images/logo.png" class="col-lg-3 col-md-3 col-sm-6" alt=""
-                    style="margin:-7px; padding-left:20px;">
-                <div class="arrowDiv my-auto">
-
-                </div>
-            </div>
+    <!-- Nav Bar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <form class="d-flex align-items-center">
+                <img src="Images/logo.png" class="img-fluid" id="imgRightTop" alt="" style="height: 50px; padding-left: 20px;">
+                <img src="Images/laulogo.png" alt="" class="img-fluid" id="imgRightTop1" alt="" style="height: 50px; padding-left: 20px;">
+                <div class="arrowDiv mx-2"></div>
+            </form>
             <div class="rightImage">
-                <img src="Images/mypic.jpg" alt="" width="100%" class="imageRightTop">
+                <img src="Images/mypic.jpg" alt="" class="imageRightTop img-fluid">
                 <span class="spanActive"></span>
             </div>
-
+        </div>
+    </nav>
+    <!-- Nav Bar Ends -->
+    <!-- To the Body -->
+    <main class="row">
+        <div class="slideOut">
+            <div>
+                <small class="btn">Dashboard</small>
+            </div>
+            <div>
+                <small class="btn">Change Password</small>
+            </div>
+            <div>
+                <small class="btn">Lautech Email</small>
+            </div>
+            <div>
+                <small class="btn">Course Registration</small>
+            </div>
+            <div>
+                <small class="btn">Payments</small>
+            </div>
+            <div>
+                <small class="btn">Classmates</small>
+            </div>
+            <div>
+                <small class="btn">Check Result</small>
+            </div>
+            <div>
+                <small class="btn">Support Tickets</small>
+            </div>
+            <div>
+                <small class="btn">FAQs</small>
+            </div>
+        </div>
+        <div>
 
         </div>
-
-    </nav>
+    </main>
 </body>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 
