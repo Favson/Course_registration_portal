@@ -13,12 +13,12 @@ function login(){
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
 
-    if (password.value ==="" || matricNo ==="" || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
+    if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
-    }else if (!matricPattern.test(matricNo) || !studentMatric){
+    }else if (!matricPattern.test(matricNo) || !studentMatric || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
         document.getElementById('password').value=""
         matricPass1.style.display='block'
         matricPass.style.display='none';
