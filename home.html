@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <style>
         .arrowDiv {
@@ -21,6 +22,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .arrowDiv:hover{
+            background-color: #132144;
         }
 
         .rightImage {
@@ -61,6 +66,10 @@
             width: 100%;
         }
 
+        .nameDIv{
+            ;
+        }
+
         .btns1{
             border: none;
             border-radius: 5px;
@@ -90,9 +99,6 @@
             height:20vh;
         }
 
-        @media (max-width: 767px) {
-            
-        }
         @media (max-width: 576px) {
             .arrowDiv {
                 width: 40px;
@@ -100,23 +106,42 @@
                 display: block !important;
             }
 
+            .imageSpan{
+                width: 25%;
+                
+            }
+
             .imageRightTop {
                 height: 40px;
             }
 
+            .slideoutMain{
+                position: relative;
+            }
+            
             .slideOut{
                 width:50%;
                 display: none;
                 position: relative;
                 z-index:1;
+                transition: left 1s ease-in-out 0.9s;
+                left: -200px;
+            /* Move to visible position */
             }
+
+            .slideOut.show {
+                left: 0; /* Move to visible position */
+                display: block;
+                opacity: 1  ;
+            }
+
             .nameDIv{
                 position: absolute;
-                margin-right:50px;
+                padding-left: 30px;
             }
 
             .spanActive {
-                width: 10px;
+                width: 10%;
                 height: 10px;
                 top: -10px;
                 left: -8px;
@@ -148,7 +173,7 @@
     </nav>
     <!-- Nav Bar Ends -->
     <!-- To the Body -->
-    <main class="row">
+    <main class="slideoutMain row">
         <div id="slideOut" class="slideOut col-md-2 col-lg-2">
             <div class="buttonDiv">
                 <a class="btn" href="home.html"><button class="btns1">Dashboard</button></a>
@@ -178,12 +203,18 @@
                 <a class="btn"><button class="btns">FAQs</button></a>
             </div>
         </div>
-        <div class="nameDIv col-md-10 col-sm-12 col-lg-10" onclick="nameDiv()">
-            <p id="dateTimeDisplay" class="pt-3 text-" style="margin-bottom: -15px;"></p>
-            <div class="w-md-75 w-sm-100 mx-auto" style=" padding-top:25px">
+        <div class="nameDIv col-md-8 col-sm-12 col-lg-8 mx-auto" onclick="nameDiv()">
+            <p id="dateTimeDisplay" class="pt-3" style="margin-bottom: -15px;"></p>
+            <div class="w-lg-100  w-sm-100 mx-auto" style="padding-top:25px;">
                 <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px; height:25vh">
                 <div style="border: white;"><img src="Images/mypic.jpg" alt="" class="imageSpan">
-                <span class="spanActive"></span> 
+                <span class="spanActive2"></span> 
+                </div>
+                <h3 class="text-center">ADEBISI FAVOUR MOMOOLUWA </h3>
+                <div class="d-flex gap-3">
+                    <span> <img src="Images/comput_info-removebg-preview.png" alt="">  COMPUTING AND INFORMATICS</span>
+                    <span> OYO, NIGERIA</span>
+                    <span>CURRENT</span>
                 </div>
             </div>
         </div>
@@ -192,14 +223,14 @@
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 <script src="script.js"></script>
 <script>
-    let slideOut = document.getElementById('slideOut')
-    function arrowDiv(){
-        let nameDIv = document.getElementById('nameDIv')
-        slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
+
+    function arrowDiv() {
+        let slideOut = document.getElementById('slideOut');
+        slideOut.classList.toggle('show');
     }
 
     function nameDiv(){
-        //slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
+        slideOut.style.display = 'none';
     }
 </script>
 </html>
