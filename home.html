@@ -66,10 +66,6 @@
             width: 100%;
         }
 
-        .nameDIv{
-            ;
-        }
-
         .btns1{
             border: none;
             border-radius: 5px;
@@ -115,25 +111,17 @@
                 height: 40px;
             }
 
-            .slideoutMain{
-                position: relative;
-            }
+
             
+
             .slideOut{
                 width:50%;
                 display: none;
                 position: relative;
                 z-index:1;
-                transition: left 1s ease-in-out 0.9s;
-                left: -200px;
-            /* Move to visible position */
             }
 
-            .slideOut.show {
-                left: 0; /* Move to visible position */
-                display: block;
-                opacity: 1  ;
-            }
+
 
             .nameDIv{
                 position: absolute;
@@ -213,7 +201,7 @@
                 <h3 class="text-center">ADEBISI FAVOUR MOMOOLUWA </h3>
                 <div class="text-center">
                     <span class=""><img src="Images/comput_info-removebg-preview.png" alt="" width="3%"> COMPUTING AND INFORMATICS</span>
-                    <span> OYO, NIGERIA</span>
+                    <span><i class="fa-light fa-location-dot"></i> OYO, NIGERIA</span>
                     <span>CURRENT</span>
                 </div>
             </div>
@@ -223,14 +211,16 @@
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 <script src="script.js"></script>
 <script>
-
+    let slideOut = document.getElementById('slideOut')
     function arrowDiv() {
-        let slideOut = document.getElementById('slideOut');
-        slideOut.classList.toggle('show');
+        let nameDIv = document.getElementById('nameDIv')
+        slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
     }
 
     function nameDiv(){
-        slideOut.style.display = 'none';
+        if (window.innerWidth <= 768) {
+            slideOut.style.display = 'none';
+        }
     }
 </script>
 </html>
