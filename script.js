@@ -25,7 +25,7 @@ function login(){
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
-    }else if (!matricPattern.test(matricNo) || !studentMatric || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
+    }else if (!matricPattern.test(matricNo) || !studentMatric.includes(parseInt(matricNo)) || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
         document.getElementById('password').value=""
         matricPass1.style.display='block'
         matricPass.style.display='none';
@@ -42,7 +42,6 @@ function login(){
         localStorage.setItem('studentVar', JSON.stringify(studentMatric))
         window.location.href = "home.html"
     }
-    
     let studentMatricNo = document.getElementById('studentMatricNo')
     let studentName1 = document.getElementById('studentName1')
     if (parseInt(matricNo) == 2023007271) {
