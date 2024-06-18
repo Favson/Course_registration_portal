@@ -19,17 +19,23 @@ function login(){
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
+    let studentMatricNo = document.getElementById('studentMatricNo')
+    let studentName1 = document.getElementById('studentName1')
     
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
-    }else if (!matricPattern.test(matricNo) || !studentMatric.includes(parseInt(matricNo)) || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
+    }else if (!matricPattern.test(matricNo) || !studentMatric || matricNo.length > 10 || matricNo.length < 10 || password.value > 14){
         document.getElementById('password').value=""
-        matricPass1.style.display='block';
+        matricPass1.style.display='block'
         matricPass.style.display='none';
         matricPass2.style.display='none';
+    }else if (matricNo.value === 2023007271) {
+        document.getElementsByClassName('studentName1').item =`<h3>AFOLABI JOSEPH ENIOLA</h3>`;
+        //studentMatricNo.innerHTML = matricNo
+        console.log("I Am djn");
     }else{
         document.getElementById('loading').style.display='block'
         setTimeout(() => {
@@ -40,20 +46,9 @@ function login(){
         matricPass1.style.display='none'
         studentMatric.push(matricNo.value)
         localStorage.setItem('studentVar', JSON.stringify(studentMatric))
-        window.location.href = "home.html";
+        window.location.href = "home.html"
     }
 
-    if (parseInt(matricNo) == 2023007271) {
-        studentName1.innerHTML = "AFOLABI JOSEPH ENIOLA";
-        //studentMatricNo.innerHTML = matricNo;
-        console.log("Condition matched"); // Add a debug statement to check if condition is matched
-    }
-    let studentMatricNo = document.getElementById('studentMatricNo')
-    let studentName1 = document.getElementById('studentName1')
-    if (parseInt(matricNo) == 2023007271) {
-        studentName1.innerHTML = "AFOLABI JOSEPH ENIOLA";
-        studentMatricNo.innerHTML = matricNo;
-    }
 }
 document.getElementById('eyeiconspan').addEventListener('click', function () {
     const passwordField = document.getElementById('password');

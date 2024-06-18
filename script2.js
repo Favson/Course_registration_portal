@@ -1,6 +1,7 @@
 
 
 
+
 let slideOut = document.getElementById('slideOut')
 function arrowDiv() {
     if(window.innerWidth <= 768){

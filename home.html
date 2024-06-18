@@ -234,7 +234,7 @@
                                 <p ><h6 class="text-secondary d-inline">@</h6>  <span id="studentEmail">favouradebisi74@gmail.com</span></p>
                                 <p id="studentNo">09157403668</p>
                                 <small class="text-secondary" style="font-size:x-small;">ACADEMIC INFORMATION</small>
-                                <p>Matric Number: <span id="studentMatricNo">2023008625</span></p>
+                                <p>Matric Number: <span id="studentMatricNoDisplay"></span></p>
                                 <hr>
                                 <button class="btn" style="background-color: #09a5be; border:none; width:50%; color:white">More Details</button>
                             </div>
@@ -261,6 +261,10 @@
     </main>
 </body>
 <script src="script.js"></script>
-<!-- <script src="script2.js"></script> -->
+<script src="script2.js"></script>
+<script>
+    studentMatric = JSON.parse(localStorage.getItem("studentVar"));
+    document.getElementById('studentMatricNoDisplay').innerHTML=`<span>${Array.prototype.includes(matricNo.value)}</span>`
+</script>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
 </html>
