@@ -1,3 +1,4 @@
+
 //TimeShow
 function updateGMTTime() {
     const timeDateInNigeria = new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
@@ -6,7 +7,6 @@ function updateGMTTime() {
 setInterval(updateGMTTime, 1000);
 
 let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
-
 //The Login Button
 function login(){
     button.innerText=`Processing...` 
@@ -19,7 +19,7 @@ function login(){
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
-
+    
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
@@ -30,7 +30,7 @@ function login(){
         matricPass1.style.display='block'
         matricPass.style.display='none';
         matricPass2.style.display='none';
-    } else{
+    }else{
         document.getElementById('loading').style.display='block'
         setTimeout(() => {
             document.getElementById('loading').style.display='none'
@@ -41,6 +41,14 @@ function login(){
         studentMatric.push(matricNo.value)
         localStorage.setItem('studentVar', JSON.stringify(studentMatric))
         window.location.href = "home.html"
+    }
+    
+    let studentMatricNo = document.getElementById('studentMatricNo')
+    let studentName1 = document.getElementById('studentName1')
+    if (parseInt(matricNo) == 2023007271) {
+        studentName1.innerHTML = "AFOLABI JOSEPH ENIOLA";
+        studentMatricNo.innerHTML = matricNo
+        console.log("I Am djn");
     }
 }
 document.getElementById('eyeiconspan').addEventListener('click', function () {
@@ -55,6 +63,7 @@ document.getElementById('eyeiconspan').addEventListener('click', function () {
     eyeIcon.classList.toggle('fa-eye');
     eyeIcon.classList.toggle('fa-eye-slash');
 });
+
 
 
 //Reset Script.js
