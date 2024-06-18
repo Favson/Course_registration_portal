@@ -42,13 +42,19 @@ function login(){
         localStorage.setItem('studentVar', JSON.stringify(studentMatric))
         window.location.href = "home.html"
     }
-    let studentMatricNo = document.getElementById('studentMatricNo')
-    let studentName1 = document.getElementById('studentName1')
+
     if (parseInt(matricNo) == 2023007271) {
         studentName1.innerHTML = "AFOLABI JOSEPH ENIOLA";
-        studentMatricNo.innerHTML = matricNo
-        console.log("I Am djn");
+        studentMatricNo.innerHTML = matricNo;
+        console.log("Condition matched"); // Add a debug statement to check if condition is matched
     }
+    // let studentMatricNo = document.getElementById('studentMatricNo')
+    // let studentName1 = document.getElementById('studentName1')
+    // if (parseInt(matricNo) == 2023007271) {
+    //     studentName1.innerHTML = "AFOLABI JOSEPH ENIOLA";
+    //     studentMatricNo.innerHTML = matricNo
+    //     console.log("I Am djn");
+    // }
 }
 document.getElementById('eyeiconspan').addEventListener('click', function () {
     const passwordField = document.getElementById('password');
