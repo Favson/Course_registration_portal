@@ -6,7 +6,10 @@ function updateGMTTime() {
 }
 setInterval(updateGMTTime, 1000);
 
-let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
+let studentMatric =[studentInfo = {
+    "2023008625":"ADEBISI FAVOUR MOMOOLUWA",
+    "2023007271": "AFOLABI JOSEPH ENIOLA"},
+    2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
 //The Login Button
 function login(){
     button.innerText=`Processing...` 
@@ -21,7 +24,7 @@ function login(){
     let matricPattern = /^2023/;
     let studentMatricNo = document.getElementById('studentMatricNo')
     let studentName1 = document.getElementById('studentName1')
-    
+
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
@@ -32,10 +35,6 @@ function login(){
         matricPass1.style.display='block'
         matricPass.style.display='none';
         matricPass2.style.display='none';
-    }else if (matricNo.value === 2023007271) {
-        document.getElementsByClassName('studentName1').item =`<h3>AFOLABI JOSEPH ENIOLA</h3>`;
-        //studentMatricNo.innerHTML = matricNo
-        console.log("I Am djn");
     }else{
         document.getElementById('loading').style.display='block'
         setTimeout(() => {
@@ -48,7 +47,6 @@ function login(){
         localStorage.setItem('studentVar', JSON.stringify(studentMatric))
         window.location.href = "home.html"
     }
-
 }
 document.getElementById('eyeiconspan').addEventListener('click', function () {
     const passwordField = document.getElementById('password');
@@ -62,8 +60,6 @@ document.getElementById('eyeiconspan').addEventListener('click', function () {
     eyeIcon.classList.toggle('fa-eye');
     eyeIcon.classList.toggle('fa-eye-slash');
 });
-
-
 
 //Reset Script.js
 function resetCode() {
@@ -80,6 +76,16 @@ function resetCode() {
     emailError.style.display='none'
    }
 }
+    if (matricNo == 2023008625) {
+        studentName1.innerHTML='ADEBISI FAVOUR MOMOLUWA'
+        console.log('io am')
+        //studentMatricNo.innerHTML = matricNo
+        
+        //console.log("I Am djn");
+    }
+
+
+
 
 
 //Homepage Scripts
