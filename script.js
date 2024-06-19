@@ -44,8 +44,23 @@ function login(){
         matricPass2.style.display='none';
         matricPass1.style.display='none'
         studentMatric.push(matricNo.value)
-        localStorage.setItem('studentVar', JSON.stringify(studentMatric))
-        window.location.href = "home.html"
+        if (matricNo == 2023008625){
+            window.location.href = "home.html"
+        }else if (matricNo == 2023008239){
+            window.location.href='Adedeji.html'
+        }else if (matricNo == 2023011681){
+            window.location.href='Adebisi olaide.html'
+        }else if (matricNo == 2023003139){
+            window.location.href='Adekunle Glory olamide.html'
+        }else if (matricNo == 2023011299){
+            window.location.href='Adegun Temiloluwa.html'
+        }else if(matricNo == 2023010465){
+            window.location.href='Adediji Victor.html'
+        }else if (matricNo == 2023008028){
+            window.location.href = 'Adedokun Elijah Adewale.html'
+        }else if (matricNo == 2023007271){
+            window.location.href='AdelakunGrace.html'
+        }
     }
 }
 document.getElementById('eyeiconspan').addEventListener('click', function () {
@@ -76,13 +91,6 @@ function resetCode() {
     emailError.style.display='none'
    }
 }
-    if (matricNo == 2023008625) {
-        studentName1.innerHTML='ADEBISI FAVOUR MOMOLUWA'
-        console.log('io am')
-        //studentMatricNo.innerHTML = matricNo
-        
-        //console.log("I Am djn");
-    }
 
 
 

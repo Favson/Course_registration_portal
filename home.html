@@ -55,7 +55,7 @@
             z-index: 1;
             width:20%;
             font-weight: 600;
-            display: flex !important;
+            display: none ;
             flex-direction: column;
             align-items: flex-start;
             padding-bottom: 200px;
@@ -70,12 +70,10 @@
         
         .buttonDiv{
             color: grey;
-            padding-right: 10px;
         }
         
         .btn{            
             margin-left: 10px;
-            width: 100%;
         }
 
         .btns1{
@@ -140,7 +138,6 @@
             .slideOut{
                 width:65%;
                 display: none;
-                position: relative;
                 z-index:1;
                 position: fixed;
                 display: flex;flex-direction: column;align-items: flex-start;
@@ -177,7 +174,7 @@
             <form class="d-flex align-items-center">
                 <img src="Images/logo.png" class="img-fluid" id="imgRightTop" alt="" style="height: 50px; padding-left: 20px;">
                 <img src="Images/laulogo.png" alt="" class="img-fluid" id="imgRightTop1" alt="" style="height: 50px; padding-left: 20px;">
-                <div class="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
+                <div class="arrowDiv" id="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
             </form>
             <div class="rightImage">
                 <img src="Images/mypic.jpg" alt="" class="imageRightTop img-fluid">
@@ -187,7 +184,7 @@
     </nav>
     <!-- Nav Bar Ends -->
     <!-- To the Body -->
-    <main class="row">
+    <main class="row" >
         <div id="slideOut" class="slideOut col-md-2 col-lg-2">
             <div class="buttonDiv">
                 <a class="btn  text-left" href="home.html"><button class="btns1"><i class="fa-thin fa-house-chimney"></i>Dashboard</button></a>
@@ -259,7 +256,7 @@
                             <div class="py-2 px-3">
                                 <b>Registration History</b>
                                 <button style="background-color:#f5ca99; border:none; float:right; width:30%" class="btn">Register course</button>
-    
+                                
                             </div>
                             <hr>
                             <div>
@@ -280,12 +277,17 @@
 <script>
     let slideOut = document.getElementById('slideOut')
     function arrowDiv() {
+            document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-backward.png" alt="" width="20%" onclick="backwardArrow()">`
+            let nameDIv = document.getElementById('nameDIv')
             slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function backwardArrow() {
+        document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-removebg-preview.png" width="20%" alt="">`
     }
 
     function nameDiv() {
             slideOut.style.display = 'none';
-        
     }
 </script>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>

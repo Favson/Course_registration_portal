@@ -50,33 +50,39 @@
         .slideOut{
             background-color:#f8f9fa;
             padding-top: 10px;
-            margin-top: 60px;
+            margin-top: 70px;
             position: fixed;
+            z-index: 1;
             width:20%;
-            justify-content: left;
-            text-align: left;
-            align-items: left;
-            padding-bottom: 100px;
+            font-weight: 600;
+            display: none ;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 200px;
+        }
+        i{
+            background-color: #f8f9fa;color:grey
         }
         .nameDIv{
             margin-top: 60px;
-            padding-left: 250px;
+            width: 80%;
         }
         
         .buttonDiv{
-            padding-right: 10px;
+            color: grey;
         }
         
         .btn{            
             margin-left: 10px;
-            width: 100%;
         }
 
         .btns1{
+            color: gray;
             border: none;
             border-radius: 5px;
             width: 100%;
-            padding: 5px;
+            padding-left: 10px;
+            padding-right:70px;
             font-weight: 400;
         }
 
@@ -85,11 +91,13 @@
             border: none;
             border-radius: 5px;
             width: 100%;
-            padding: 5px;
+            color:gray;
             font-weight: 400;
         }
         .btns:hover{
             background-color:#f0f0f0;
+            padding-left: 10px;
+            padding-right: 20px;
         }
 
         .imgUser{
@@ -108,7 +116,7 @@
 
         @media (max-width: 576px) {
             .arrowDiv {
-                display: block !important;
+                display: block;
                 margin-left: 5px;
                 margin-right:-90px;
             }
@@ -130,9 +138,9 @@
             .slideOut{
                 width:65%;
                 display: none;
-                position: relative;
                 z-index:1;
                 position: fixed;
+                display: flex;flex-direction: column;align-items: flex-start;
             }
 
 
@@ -140,6 +148,7 @@
             .nameDIv{
                 position: absolute;
                 padding-left: 30px;
+                width: 100%;
             }
 
             .spanActive {
@@ -270,16 +279,12 @@
 <script>
     let slideOut = document.getElementById('slideOut')
     function arrowDiv() {
-        if (window.innerWidth <= 768) {
             let nameDIv = document.getElementById('nameDIv')
             slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
-        }
     }
 
     function nameDiv() {
-        if (window.innerWidth <= 768) {
             slideOut.style.display = 'none';
-        }
     }
 </script>
 <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
