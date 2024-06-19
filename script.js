@@ -62,6 +62,8 @@ function login(){
             window.location.href='AdelakunGrace.html'
         }else if (matricNo == 2023002524){
             window.location.href='Adekunjo Emmanuel Ayomide.html'
+        }else if (matricNo == 2023004947){
+            window.location.href='ADELEYE, Oluwaferanmi.html'
         }
     }
 }
