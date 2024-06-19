@@ -60,7 +60,7 @@ function login(){
             window.location.href = 'Adedokun Elijah Adewale.html'
         }else if (matricNo == 2023007271){
             window.location.href='AdelakunGrace.html'
-        }else if (){
+        }else if (matricNo == 2023002524){
             window.location.href='Adekunjo Emmanuel Ayomide.html'
         }
     }
