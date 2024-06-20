@@ -22,7 +22,7 @@ function login(){
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
-    let PassPhrase = "cybCla$$28"
+    let PassPhrase = "cybClass28"
 
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
