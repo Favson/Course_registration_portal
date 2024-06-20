@@ -68,6 +68,10 @@ function login(){
                 window.location.href='Adebowale Victor Oladayo.html'
             }else if (matricNo == 2023002857){
                 window.location.href='Adebisi ishaq Ayomide.html'
+            }else if (matricNo == 2023006202){
+                window.location.href='Adelusi Desmond.html'
+            }else if (matricNo == 2023008891){
+                window.location.href = 'Adekoya Anjolaoluwa.html'
             }
         }
     }
