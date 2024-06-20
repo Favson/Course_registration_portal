@@ -72,6 +72,8 @@ function login(){
                 window.location.href='Adelusi Desmond.html'
             }else if (matricNo == 2023008891){
                 window.location.href = 'Adekoya Anjolaoluwa.html'
+            }else if (matricNo == 2023005814){
+                window.location.href='Adekunle Abdulhameed.html'
             }
         }
     }

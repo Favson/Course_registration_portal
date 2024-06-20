@@ -47,9 +47,11 @@
             top: 15px;
             left:-12px;
         }
+
         .imgBackground{
             height: 25vh;
         }
+
         .slideOut{
             background-color:#f8f9fa;
             padding-top: 10px;
@@ -139,16 +141,15 @@
             }
 
             .imgBackground{
-                height:20vh
+                height: 20vh;
             }
 
             .slideOut{
                 width:65%;
                 display: none;
                 z-index:1;
-                padding-bottom: 400px;
                 position: fixed;
-                flex-direction: column;align-items: flex-start;
+                display: flex;flex-direction: column;align-items: flex-start;
             }
 
 
@@ -182,20 +183,20 @@
             <form class="d-flex align-items-center">
                 <img src="Images/logo.png" class="img-fluid" id="imgRightTop" alt="" style="height: 50px; padding-left: 20px;">
                 <img src="Images/laulogo.png" alt="" class="img-fluid" id="imgRightTop1" alt="" style="height: 50px; padding-left: 20px;">
-                <div class="arrowDiv" id="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
+                <div class="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
             </form>
             <div class="rightImage">
-                <img src="Images/mypic.jpg" alt="" class="imageRightTop img-fluid">
+                <img src="Images/Adekunle Abdulhameed Ademola.jpg" alt="" class="imageRightTop img-fluid">
                 <span class="spanActive"></span>
             </div>
         </div>
     </nav>
     <!-- Nav Bar Ends -->
     <!-- To the Body -->
-    <main class="row" >
-        <div id="slideOut" class="slideOut col-md-2 col-lg-2">
+    <main class="slideoutMain row">
+        <div id="slideOut"  class="slideOut col-md-2.4 col-lg-2">
             <div class="buttonDiv">
-                <a class="btn  text-left" href="home.html"><button class="btns1"><i class="fa-thin fa-house-chimney"></i>Dashboard</button></a>
+                <a class="btn" href="home.html"><i class="fa-thin fa-house-chimney"></i><button class="btns1">Dashboard</button></a>
             </div>
             <div class="buttonDiv">
                 <a class="btn"><button class="btns"><i class="fa-light fa-lock"></i> Change Password</button></a>
@@ -222,50 +223,71 @@
                 <a class="btn"><button class="btns"><i class="fa-solid fa-question"></i> FAQs</button></a>
             </div>
         </div>
-        <div class="nameDIv col-md-12 col-sm-12 col-lg-12 mx-auto" onclick="nameDiv()">
+        <div class="nameDIv col-md-8 col-sm-12 col-lg-10 mx-auto" onclick="nameDiv()">
             <p id="dateTimeDisplay" class="pt-3" style="margin-bottom: -15px;"></p>
+            <div class="w-lg-100  w-sm-100 mx-auto" style="padding-top:25px;">
+                <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px;" class="imgBackground">
+                <div style="border: white;"><img src="Images/Adekunle Abdulhameed Ademola.jpg" alt="" class="imageSpan" id="studentImg">
+                <span class="spanActive2"></span> 
+                </div>
+                <h3 class="text-center" id="studentName1" style="text-transform: uppercase;">Adekunle Abdulhameed Ademola </h3>
+                <div class="text-center">
+                    <span class="mx-a"><img src="Images/comput_info-removebg-preview.png" alt="" class="imgUser"> COMPUTING AND INFORMATICS</span>
+                    <span class="text-center"><img src="Images/location-removebg-preview.png" class="imgUser" alt=""> OYO, NIGERIA</span>
+                    <span><img src="Images/Current-removebg-preview.png" class="imgUser" alt=""> CURRENT</span>
+                </div>
 
-            <!-- Course Registration -->
-            <div>
-                <table>
-                    <tr>
-                        <th>
-                            <thead>S/N</thead>
-                            <thead>Courses</thead>
-                            <thead>Course Title</thead>
-                            <thead>Unit</thead> 
-                        </th>
-                    </tr>
-                    <tr>
-                       <td>1</td> 
-                       <td>2</td>
-                       <td>3</td>
-                       <td>4</td>
-                       <td>5</td>
-                       <td>6</td>
-                       <td>7</td>
-                       <td>8</td>
-                       <td>9</td>
-                    </tr>
-                </table>
+                <div>
+                    <div class="row gap-3">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="academic shadow my-4 ps-3" style="border-radius:10px;height:70px;padding-top:10px;font-weight:500" >
+                                <p style="margin-bottom: -3px;">Academic Session: <a href="" style="text-decoration: none;">2023/2024</a></p>
+                                <p>Semester: <a href="" style="text-decoration: none;">Harmattan</a></p>
+                            </div>
+                            <div class="shadow my-4 ps-3" style="border-radius:10px;padding-top:10px; padding-bottom:50px" >
+                                <p style="font-size: large;">Profile</p>
+                                <hr>
+                                <small class="text-secondary" style="font-size:x-small;">ABOUT</small>
+                                <p class="d-flex"><img src="Images/contact-removebg-preview.png" width="6%" height="22vh" alt="" class="me-2"><span class="w-100" id="studentName" style="text-transform:uppercase;">Adekunle Abdulhameed Ademola</span></p>
+                                <p><i class="fa-regular fa-envelope-open me-3"></i>CYBER SECURITY SCIENCE</p>
+                                <p><img src="Images/comput_info-removebg-preview.png" width="7%" alt="" class="me-2"> COMPUTING AND INFORMATICS</p>
+                                <!-- <br> -->
+                                <small class="text-secondary" style="font-size:x-small;">CONTACT</small>
+                                <p ><h6 class="text-secondary d-inline"><i class="fa-solid fa-at"></i></h6>  <span id="studentEmail">ademolaadekunle810@gmail.com</p>
+                                <p id="studentNo"><i class="me-2 fa-solid fa-mobile-screen-button"></i>09135199881</p>
+                                <small class="text-secondary" style="font-size:x-small;">ACADEMIC INFORMATION</small>
+                                <p>Matric Number: 2023005814</p>
+                                <hr>
+                                <button class="btn" style="background-color: #09a5be; border:none; width:50%; color:white">More Details</button>
+                            </div>
+                        </div>
+                        <div class="shadow col-lg-7 col-sm-12 shadow my-4 ps-3 py-2" style="border-radius:10px;font-weight:500">
+                            <div class="py-2 px-3">
+                                <b>Registration History</b>
+                                <button style="background-color:#f5ca99; border:none; float:right; width:30%" class="btn">Register course</button>
+    
+                            </div>
+                            <hr>
+                            <div>
+                                <p><img src="Images/Cyn.png" width="10%" alt=""><a href="" style="text-decoration: none; font-weight:500" class="">CYB - 2023/2024</a></p>
+                                <small class="text-secondary ms-5">100H | Enrolled Courses 9 | Units 18 <p class="px-3 " style="background-color:#e5f9f6;border-radius:20px;display:inline; font-size: 10px; color:#00c9a7"><span style="background-color: #00c9a7;border-radius:50%;font-size:xx-small">oo</span> "Completed"</p><br>
+                                <small class="text-secondary ms-5">29/04/2024</small><br>
+                                <button class="btn w-25 my-4 ms-5 border border-danger text-danger bg-white">Print</button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="text-center text-secondary pt-3" style="font-size: small;">Copyright © 2024 LAUTECH ICT. All rights reserved.</footer>
+                </div>
             </div>
         </div>
-
-
-        
     </main>
 </body>
 <script src="script.js"></script>
 <script>
     let slideOut = document.getElementById('slideOut')
     function arrowDiv() {
-            document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-backward.png" alt="" width="20%" onclick="backwardArrow()">`
             let nameDIv = document.getElementById('nameDIv')
             slideOut.style.display = slideOut.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function backwardArrow() {
-        document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-removebg-preview.png" width="20%" alt="">`
     }
 
     function nameDiv() {
