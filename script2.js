@@ -36,7 +36,12 @@ function registerCourses() {
         const selectedCourses = Array.from(form.elements['course'])
                                     .filter(course => course.checked)
                                     .map(course => course.value);
-                                    window.location.href = 'summary.html';
+        
+        if(matricNumber == 2023008625 || inputName == "ADEBISI FAVOUR MOMOLUWA"){
+            window.location.href = 'summary.html';
+        }else if (matricNumber == 2023004212 || inputName == "ADEBOWALE ADEOLA PRECIOUS"){
+            window.location.href='adeolaSummary.html '
+        }
     }
     checkboxes.checked = false
     document.getElementById('inputName').value=''
