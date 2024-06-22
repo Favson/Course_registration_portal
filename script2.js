@@ -21,7 +21,7 @@ function registerCourses() {
     if(inputName.value === "" || matricNumber.value ===""){
         document.getElementById('err').style.display='block'
         document.getElementById('incorrect').style.display='none'
-    }else if (matricNumber){
+    }else if (!studentMatric){
         document.getElementById('incorrect').style.display='block'
         document.getElementById('err').style.display='none'
     }else if (count < 9){
@@ -32,6 +32,7 @@ function registerCourses() {
         let UserObj = {inputName, matricNumber}
         UserArray.push(UserObj)
         localStorage.setItem('username', JSON.stringify(UserArray));
+
         const form = document.getElementById('registrationForm');
         const selectedCourses = Array.from(form.elements['course'])
                                     .filter(course => course.checked)
@@ -40,14 +41,23 @@ function registerCourses() {
                                 
     if(matricNumber == 2023008625 || inputName == "ADEBISI FAVOUR MOMOLUWA"){
         window.location.href = 'summary.html';
-    }else if (matricNumber == 2023004212 || inputName == "ADEBOWALE ADEOLA PRECIOUS"){
+    }else if (matricNumber === 2023004212 || inputName == "ADEBOWALE ADEOLA PRECIOUS"){
         window.location.href='adeolaSummary.html '
     }
-    checkboxes.checked = false
+    checkboxes.forEach(checkbox => checkbox.checked = false);
     document.getElementById('inputName').value=''
-    document.getElementById('matricNumber').value=""
+    document.getElementById('matricNumber').value="" 
+    count=""
+    document.getElementById('inputName').value=''
+    document.getElementById('matricNumber').value="" 
+    document.getElementById('UserNameOut').innerHTML ="";
+    document.getElementById('matricNoOut').innerHTML ="";
 }
  UserArray = JSON.parse(localStorage.getItem("username")) || [];
- console.log(UserArray);
-     document.getElementById('UserNameOut').innerHTML= `${UserArray[1].inputName}`
-     document.getElementById('matricNoOut').innerHTML=`${UserArray[1].matricNumber}`;
+ 
+ if (UserArray.length > 1) {
+     document.getElementById('UserNameOut').innerHTML = `${UserArray.inputName}`;
+     document.getElementById('matricNoOut').innerHTML = `${UserArray.matricNumber}`;
+     console.log(UserArray)
+     registerCourses()
+ }
