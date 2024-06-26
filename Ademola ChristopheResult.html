@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <style>
+        #address{
+            line-height: 7px;
+        }
+
+        .current{
+            margin-left: 120px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .btnDiv{
+            margin-left: 150px;
+        }
+
+        button {
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            #addressDiv{
+                width: 50%;
+                font-size: small;
+            }
+            #address{
+                line-height: 0px;
+                width: 100%;
+            }
+            #addressImg{
+                width: 50%;
+            }
+            .current{
+                margin-left: 0px;
+            }
+            .myPic{
+                width: 40%;
+                margin-right:-100px;
+            }
+        }
+
+        @media (max-width: 990px){
+            .addressImg{
+                margin-left: 150px;
+            }
+            .current{
+                margin-left: 90px;
+            }
+            .myPic{
+                width: 30%;
+            }
+            table{
+                width:90%;
+            }
+        }
+
+        @media (max-width: 576px){
+            body{
+                padding-top: 30px;
+            }
+            #addressImg{
+                width: 40%;
+            }
+            #addressDiv{
+                width: 60%;
+                margin: auto auto;
+                padding-top: 25px;
+                font-size:7px;
+                font-weight: bolder;
+            }
+            #address{
+                width: 100%;
+            }
+            .current{
+                margin-left: 0px;
+            }
+            .myPic{
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body style="padding-bottom: 50px;">
+    <div class="row mx-auto">
+        <div id="addressImg" class="col-lg-3 col-md-3 mx-lg-auto"><img src="Images/logo.png" width="100%" class="p-3" alt=""></div>
+        <div id="addressDiv" class="col-lg-4 col-md-6 col-sm-3 mx-auto my-auto" style="font-weight: 400;">
+            <p id="address">DEPARTMENT OF CYBERSECURITY SCIENCE</p>
+            <p id="address">LADOKE AKINTOLA UNIVERSITY OF TECNOLOGY,</p>
+            <p id="address">P.M.B 4000, OGBOMOSO, OYO STATE</p> 
+        </div>
+    </div>
+    <hr>
+    <div class="ps-5 row" style="line-height:29px">
+        <div class="current col-lg-5 col-md-5 col-sm-6">
+            <b>CURRENT SESSION: </b><span class="ps-4">2023/2024</span> <br>
+            <b>CURRENT SEMESTER: </b> <span class="ps-2">100H</span> <br>
+            <b>FULLNAME: </b><span id="UserNameOut">ADEBISI FAVOUR MOMOLUWA</span><br>
+            <b>MATRIC NUMBER: </b><span id="matricNoOut">2023008625</span>
+        </div>
+        <div class="col-lg-5 col-sm-6 col-md-5">
+            <img src="Images/mypic.jpg" width="100%" class="myPic col-lg-2 col-md-2 col-sm-2">
+        </div>
+    </div>
+    <hr>
+    <center><B>COURSES REGISTERED</B></center>
+    <form id="registrationForm">
+        <table class="col-lg-9 mx-auto">
+            <thead>
+                <tr>
+                    <th style="text-transform: uppercase;">Course Code</th>
+                    <th style="text-transform: uppercase;">Course Title</th>
+                    <th style="text-transform: uppercase;">Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CYB101</td>
+                    <td>Fundamentals of Computing and Cyber security</td>
+                    <td>2 units</td>
+                </tr>
+                <tr>
+                    <td>CYB103</td>
+                    <td>Principles of Web Development 1</td>
+                    <td>2 units</td>
+                </tr>
+                <tr>
+                    <td>PHY101</td>
+                    <td>General Physics 1</td>
+                    <td>2 units</td>
+                </tr>
+                <tr>
+                    <td>MTH101</td>
+                    <td>Elementary Mathematics 1</td>
+                    <td>2 units</td>
+                </tr>
+                <tr>
+                    <td>GST111</td>
+                    <td>Communication in English</td>
+                    <td>2 units</td>
+                </tr>
+                <tr>
+                    <td>COS101</td>
+                    <td>Introduction to Computing Science</td>
+                    <td>3 units</td>
+                </tr>
+                <tr>
+                    <td>LIB101</td>
+                    <td>Introduction to Library</td>
+                    <td>1 unit</td>
+                </tr>
+                <tr>
+                    <td>PHY107</td>
+                    <td>General Physics Pratical I</td>
+                    <td>1 unit</td>
+                </tr>
+                <tr>
+                    <td>STA111</td>
+                    <td>Descriptive Statistics</td>
+                    <td>3 units</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="col-lg-2 col-sm-6 ms-5">
+        <button onclick="window.print()" class="btnDiv bg-primary px-5 py-1">Print</button>
+    </div>
+        <script src="script2.js"></script>
+</body>
+
+</html>
