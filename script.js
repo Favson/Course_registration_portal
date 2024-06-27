@@ -73,6 +73,8 @@ function login(){
                 window.location.href='Adekunle Abdulhameed.html'
             }else if (matricNo == 2023004212){
                 window.location.href="adeola.html"
+            }else if (matricNo == 2023009597){
+                window.location.href='Ademola Christopher.html'
             }
         }
     }

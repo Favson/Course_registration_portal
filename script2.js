@@ -68,7 +68,7 @@ function registerCourses() {
         window.location.href='Adeleye,oluwaferanmiResult.html'
     }else if (inputName == 'Adelusi Desmond' || matricNumber == 2023006202){
         window.location.href='Adelusi DesmondResult.html'
-    }
+    }gi
     checkboxes.forEach(checkbox => checkbox.checked = false);
     document.getElementById('inputName').value=''
     document.getElementById('matricNumber').value="" 
