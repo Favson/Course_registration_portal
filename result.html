@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Home</title>
+    <link rel="shortcut icon" href="Images/laulogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        .navbar{
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+        }
+        .arrowDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -90px;
+        }
+
+        .rightImage {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+        }
+        #imgRightTop1{
+            display: none;
+        }
+        .imageRightTop {
+            border-radius: 50%;
+            height: 50px;
+        }
+
+        .spanActive {
+            border: white 1px solid;
+            border-radius: 50%;
+            background-color: limegreen;
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 15px;
+            left:-12px;
+        }
+        .imgBackground{
+            height: 25vh;
+        }
+        .slideOut{
+            background-color:#f8f9fa;
+            padding-top: 10px;
+            margin-top: 70px;
+            position: fixed;
+            width:20%;
+            font-weight: 600;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 200px;
+        }
+        i{
+            background-color: #f8f9fa;color:grey
+        }
+        .nameDIv{
+            margin-top: 60px;
+            width: 80%;
+        }
+        
+        .buttonDiv{
+            color: grey;
+        }
+        
+        .btn{            
+            margin-left: 10px;
+        }
+
+        .btns1{
+            color: gray;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            padding-left: 10px;
+            padding-right:70px;
+            font-weight: 400;
+        }
+
+        .btns{
+            background-color: #f8f9fa;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            color:gray;
+            font-weight: 400;
+        }
+        .btns:hover{
+            background-color:#f0f0f0;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+
+        .imgUser{
+            width: 2%;
+        }
+
+        .imageSpan{
+            border: white 5px solid;
+            margin-top: -100px;
+            margin-left:43%;
+            width:14%;
+            border-radius:50%;
+            height:20vh;
+        }
+
+
+        @media (max-width: 576px) {
+            .arrowDiv {
+                display: block;
+                margin-left: 5px;
+                margin-right:-90px;
+            }
+
+            .imageSpan{
+                width: 25%;
+                
+            }
+
+            .imageRightTop {
+                height: 40px;
+            }
+
+
+            .imgUser{
+                width: 5%;
+            }
+
+            .imgBackground{
+                height:20vh
+            }
+
+            .slideOut{
+                width:65%;
+                padding-bottom: 400px;
+                position: fixed;
+                flex-direction: column;align-items: flex-start;
+            }
+
+
+
+            .nameDIv{
+                position: absolute;
+                padding-left: 30px;
+                width: 100%;
+            }
+
+            .spanActive {
+                width: 10%;
+                height: 10px;
+                top: -10px;
+                left: -8px;
+            }
+            #imgRightTop{
+                display: none;
+            }
+            #imgRightTop1{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <form class="d-flex align-items-center">
+                <img src="Images/logo.png" class="img-fluid" id="imgRightTop" alt="" style="height: 50px; padding-left: 20px;">
+                <img src="Images/laulogo.png" alt="" class="img-fluid" id="imgRightTop1" alt="" style="height: 50px; padding-left: 20px;">
+                <div class="arrowDiv" id="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
+            </form>
+
+        </div>
+    </nav>
+    <!-- Nav Bar Ends -->
+    <!-- To the Body -->
+    <main class="row" >
+        <div id="slideOut" class="slideOut col-md-2 col-lg-2">
+            <div class="buttonDiv">
+                <a class="btn text-left" href="home.html"><button class="btns1"><i class="fa-thin fa-house-chimney"></i>Dashboard</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-light fa-lock"></i> Change Password</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-regular fa-envelope"></i>  Lautech Email</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn" href="course_registration.html"><button class="btns"><i class="fa-solid fa-bars"></i> Course Registration</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-regular fa-credit-card"></i> Payments</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-solid fa-users"></i> Classmates</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn" href="result.html"><button class="btns"><i class="fa-regular fa-calendar-days"></i> Check Result</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-regular fa-comment"></i> Support Tickets</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn"><button class="btns"><i class="fa-solid fa-question"></i> FAQs</button></a>
+            </div>
+            <div class="buttonDiv">
+                <a class="btn" href="index.html"><button class="btns">Logout</button></a>
+            </div>
+        </div>
+        <div class="nameDIv col-md-12 col-sm-12 col-lg-12 mx-auto" onclick="nameDiv()">
+            <p id="dateTimeDisplay" class="pt-3" style="margin-bottom: -15px;"></p>
+            <div class="w-lg-100  w-sm-100 mx-auto" style="padding-top:25px;">
+                <h5 class="text-primary">Exciting news! This feature is currently undergoing some enhancements to provide you with the best experience possible. We can't wait to unveil it to you soon! In the meantime, stay tuned for updates on its release. Thank you for your patience and understanding.</h5>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    function backwardArrow() {
+        document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-removebg-preview.png" width="20%" alt="">`
+    }
+
+
+</script>
+</html>
