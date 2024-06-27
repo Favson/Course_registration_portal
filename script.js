@@ -32,7 +32,7 @@ function login(){
         matricPass.style.display='none';
         matricPass2.style.display='none';
     }else{
-        document.getElementById('loading').style.display='block'
+        document.getElementById('loading').style.display="block"
         setTimeout(() => {
             document.getElementById('loading').style.display='none'
         }, 2000);
