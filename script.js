@@ -19,7 +19,7 @@ function login(){
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
-    let PassPhrase = "C¥₿Group2Project"
+    let PassPhrase = "CybGroup2Project"
 
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
