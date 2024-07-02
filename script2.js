@@ -42,7 +42,7 @@ function registerCourses() {
         window.location.href='Adebisi ishaqresult.html'
     }else if(inputName == 'Adebisi olaide Ezekiel' || matricNumber == 2023011681){
         window.location.href='Adebisi OlaideResult.html'
-    }else if (inputName == 'Adebowale victo Oladayo' || matricNumber ==2023010703){
+    }else if (inputName == 'Adebowale victor Oladayo' || matricNumber ==2023010703){
         window.location.href='Adebowale victo OladayoResult.html'
     }else if (inputName == 'Adedeji Micheal Adewale' || matricNumber == 2023011681){
         window.location.href='AdedejiReult.html'
