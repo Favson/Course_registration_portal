@@ -13,6 +13,7 @@ checkboxes.forEach(checkbox => {
     });
 });
 
+let details = []
 let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
 function registerCourses() {
     let inputName = document.getElementById('inputName').value;
@@ -26,6 +27,8 @@ function registerCourses() {
     }else if (count < 9){
         alert('All Must be checked')
     }else if(document.getElementById('checkBox').checked.length =  9){
+        details.push(inputName, matricNumber)
+        localStorage.setItem("studentDetails", JSON.stringify(details))
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const form = document.getElementById('registrationForm');
@@ -76,3 +79,6 @@ function registerCourses() {
     document.getElementById('matricNumber').value="" 
     count="" 
 }
+
+details = JSON.parse(localStorage.getItem("studentDetails")) || [];
+console.log(details);
