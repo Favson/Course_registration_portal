@@ -77,7 +77,7 @@ function login(){
                 window.location.href='Ademola Christopher.html'
             }else if (matricNo == 2023007238){
                 window.location.href = "Adelaja Abraham Ayomide.html"
-            }
+            }else
         }
     }
 }
