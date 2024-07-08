@@ -78,7 +78,7 @@ function registerCourses() {
         }else if (inputName == 'Ademola Christopher Adeleye' || matricNumber == 2023009597){
             window.location.href='Ademola ChristopheResult.html'
         }
-    }
+    }   ``
     checkboxes.forEach(checkbox => checkbox.checked = false);
     document.getElementById('inputName').value=''
     document.getElementById('matricNumber').value="" 
