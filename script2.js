@@ -77,8 +77,10 @@ function registerCourses() {
             window.location.href='Adelusi DesmondResult.html'
         }else if (inputName == 'Ademola Christopher Adeleye' || matricNumber == 2023009597){
             window.location.href='Ademola ChristopheResult.html'
+        }else if (inputName == "Emmanuel Jeremiah GLory" || matricNumber == 2023008411){
+            window.location.href='emmanuel jeremiahResult.html'
         }
-    }   ``
+    }   
     checkboxes.forEach(checkbox => checkbox.checked = false);
     document.getElementById('inputName').value=''
     document.getElementById('matricNumber').value="" 
