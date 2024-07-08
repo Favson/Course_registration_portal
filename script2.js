@@ -30,9 +30,6 @@ function registerCourses() {
     }else if (count < 9){
         alert('All Must be checked')
     }else if(document.getElementById('checkBox').checked.length =  9){
-        details.push(inputName.value, matricNumber.value)
-        localStorage.setItem("studentDetails", JSON.stringify(details))
-        window.location.href='sum.html'
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const form = document.getElementById('registrationForm');
