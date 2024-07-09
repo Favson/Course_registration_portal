@@ -79,6 +79,8 @@ function login(){
                 window.location.href = "Adelaja Abraham Ayomide.html"
             }else if (matricNo == 2023008411){
                 window.location.href= "emmanuel jeremiah.html"
+            }else{
+                console.error("Invalid matric number");
             }
         }
     }
