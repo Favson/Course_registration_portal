@@ -32,7 +32,7 @@ function registerCourses() {
     }else if(document.getElementById('checkBox').checked.length =  9){
         localStorage.setItem('name', inputName);
         localStorage.setItem('matric', matricNumber)
-        window.location.href = 'sum.html';
+        window.location.href = 'display.html';
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const form = document.getElementById('registrationForm');
