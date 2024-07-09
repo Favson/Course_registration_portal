@@ -29,7 +29,9 @@ function registerCourses() {
         document.getElementById('err').style.display='none'
     }else if (count < 9){
         alert('All Must be checked')
-    }else if(document.getElementById('checkBox').checked.length =  9){
+    }else if (matricNumber.length >10 || matricNumber.length < 10){
+        alert('Incorrect Credential')
+    } else if(document.getElementById('checkBox').checked.length =  9){
         localStorage.setItem('name', inputName);
         localStorage.setItem('matric', matricNumber)
         window.location.href = 'display.html';
