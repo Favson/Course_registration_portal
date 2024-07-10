@@ -30,7 +30,7 @@ function login(){
         document.getElementById('password').value=""
         matricPass1.style.display='block'
         matricPass.style.display='none';
-        matricPass2.style.display='none';
+        matricPass2.style.display='none';IIiihddhdhdhdhjj
     }else{
         document.getElementById('loading').style.display="block"
         setTimeout(() => {
