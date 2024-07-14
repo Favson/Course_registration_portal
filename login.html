@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Account</h2> 
+        <h4>It's quite easy 😉</h4>
+        <form> <!--A Form to collect users data to acess the course registration menu.-->
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required><br>
+            <input type="email" placeholder="Email address" required><br>
+            <input type="number" placeholder="Mobile phone number" required><br>
+            <input type="number" placeholder="Matric Number" required><br>
+            <input type="password" placeholder="New Password" required ><br>
+            <label for="gender">Gender:</label>
+            <select name="genders" id="gender" form="gendertype">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            </select> <br>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
