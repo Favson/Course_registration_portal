@@ -26,7 +26,7 @@ function login(){
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
-    }else if (!matricPattern.test(matricNo) || !studentMatric || matricNo.length > 10 || matricNo.length < 10 || password.value > 11 || password != PassPhrase){
+    }else if (!matricPattern.test(matricNo) && !studentMatric && matricNo.length > 10 && matricNo.length < 10 && password.value > 11 && password != PassPhrase){
         document.getElementById('password').value=""
         matricPass1.style.display='block'
         matricPass.style.display='none';
