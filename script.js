@@ -1,11 +1,10 @@
 
 //TimeShow
 function updateGMTTime() {
-    const timeDateInNigeria = new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
-    dateTimeDisplay.innerHTML=(timeDateInNigeria);
+    const timeDateInNigeria =new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
+    dateTimeDisplay.innerText=(timeDateInNigeria);
 }
 setInterval(updateGMTTime, 1000);
-
 let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
 //The Login Button
 function login(){
@@ -21,7 +20,7 @@ function login(){
     let matricPattern = /^2023/;
     let PassPhrase = "CybGroup2Project"
 
-    if (password.value ==="" || matricNo ===""){
+    if (password ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
