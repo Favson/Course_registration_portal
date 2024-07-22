@@ -21,31 +21,18 @@ checkboxes.forEach(checkbox => {
 
 
 //Function to know the registered courses and to make sure it's 9 courses registered 
+document.getElementById('inputSpan1').innerText = `${retrievedData[0].fullName}`;
+document.getElementById('inputSpan2').innerText = `${retrievedData[0].matric}`;
+
 function registerCourses() {
-    let inputName = document.getElementById('inputName').value;
-    let matricNumber = document.getElementById("matricNumber").value;
-    if(inputName.value === "" || matricNumber.value ===""){
-        document.getElementById('err').style.display='block'
-        document.getElementById('incorrect').style.display='none'
-    }else if (inputName != `${retrievedData[0].matric}` || matricNumber != `${registerCourses[0].password}`){
-        document.getElementById('incorrect').style.display='block'
-        document.getElementById('err').style.display='none'
-    }else if (matricNumber.length >10 || matricNumber.length < 10){
-        alert('Incorrect Credential')
-    }else{
-        localStorage.setItem('name', inputName);
-        localStorage.setItem('matric', matricNumber)
         window.location.href = 'display.html';
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
-        const form = document.getElementById('registrationForm');
         const selectedCourses = Array.from(form.elements['course'])
                                     .filter(course => course.checked)
-                                    .map(course => course.value);
-    }
+                                    .map(course => course.value)
     checkboxes.forEach(checkbox => checkbox.checked = false);
     document.getElementById('inputName').value=''
     document.getElementById('matricNumber').value="" 
     count="" 
 }
-

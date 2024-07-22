@@ -20,12 +20,12 @@ if (retrievedData.length > 0) {
     document.getElementById('abb').innerText = `${retrievedData[0].deptAbbr}`;
 }
 
-const base64String = localStorage.getItem('image');
-if (base64String) {
-    document.getElementById('storedImage').src = base64String;
+const image = localStorage.getItem('image');
+if (image) {
+    document.getElementById('storedImage').src = image;
 }
 
-const base64String1 = localStorage.getItem('image');
-if (base64String1) {
-    document.getElementById('storedImage1').src = base64String1;
+const image1 = localStorage.getItem('image');
+if (image1) {
+    document.getElementById('storedImage1').src = image1;
 }
