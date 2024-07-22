@@ -25,7 +25,8 @@ document.getElementById('inputSpan1').innerText = `${retrievedData[0].fullName}`
 document.getElementById('inputSpan2').innerText = `${retrievedData[0].matric}`;
 
 function registerCourses() {
-        window.location.href = 'display.html';
+    if (document.get)
+        window.location.href = 'scratch.html';
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const selectedCourses = Array.from(form.elements['course'])

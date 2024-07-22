@@ -34,40 +34,5 @@
         </form>
     </div>
     <script src="index.js" defer></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-        import { GoogleAuthProvider, signInWithPopup, getAuth } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
-
-        const firebaseConfig = {    
-          apiKey: "AIzaSyBzj-aMlFQ4Q0iY2F1WdFjpwPEtCzRmpr4",
-          authDomain: "lautech-course-registration.firebaseapp.com",
-          projectId: "lautech-course-registration",
-          storageBucket: "lautech-course-registration.appspot.com",
-          messagingSenderId: "765202115729",
-          appId: "1:765202115729:web:d0da1c2777d3460f072330"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const provider = new GoogleAuthProvider();
-        const auth = getAuth();
-
-        const signIn = () => {
-            signInWithPopup(auth, provider)
-            .then((result) => {
-               const user = result.user;
-               console.log("User signed in:", user);
-            }).catch((error) => {
-               const errorCode = error.code;
-               const errorMessage = error.message;
-               console.error(`Error [${errorCode}]: ${errorMessage}`);
-            });
-        }
-
-        document.getElementById('signUpForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            submit();
-        });
-    </script>
 </body>
 </html>
