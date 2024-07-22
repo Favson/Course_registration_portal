@@ -1,5 +1,6 @@
-let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
-//The Login Button
+let retrievedData = JSON.parse(localStorage.getItem("data")) || [];
+console.log(retrievedData);
+//login buttom
 function login(){
     button.innerText="Processing...";
     setTimeout(() => {
@@ -17,13 +18,12 @@ function login(){
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
+    }else if (!matricPattern.test(matricNo) && !studentMatric && matricNo.length > 10 && matricNo.length < 10 && password.value > 11 && password != PassPhrase){
+        document.getElementById('password').value=""
+        matricPass1.style.display='block'
+        matricPass.style.display='none';
+        matricPass2.style.display='none';
     }
-    // }else if (!matricPattern.test(matricNo) && !studentMatric && matricNo.length > 10 && matricNo.length < 10 && password.value > 11 && password != PassPhrase){
-    //     document.getElementById('password').value=""
-    //     matricPass1.style.display='block'
-    //     matricPass.style.display='none';
-    //     matricPass2.style.display='none';
-    // }
     else{
         document.getElementById('loading').style.display="block"
         setTimeout(() => {
@@ -32,49 +32,8 @@ function login(){
         matricPass.style.display='none';
         matricPass2.style.display='none';
         matricPass1.style.display='none'
-        studentMatric.push(matricNo.value)
-        if(PassPhrase == password){
-            if (matricNo == 2023008625){
-                window.location.href = "home.html"
-            }else if (matricNo == 2023008239){
-                window.location.href='Adedeji.html'
-            }else if (matricNo == 2023011681){
-                window.location.href='Adebisi olaide.html'
-            }else if (matricNo == 2023003139){
-                window.location.href='Adekunle Glory olamide.html'
-            }else if (matricNo == 2023011299){
-                window.location.href='Adegun Temiloluwa.html'
-            }else if(matricNo == 2023010465){
-                window.location.href='Adediji Victor.html'
-            }else if (matricNo == 2023008028){
-                window.location.href = 'Adedokun Elijah Adewale.html'
-            }else if (matricNo == 2023007271){
-                window.location.href='AdelakunGrace.html'
-            }else if (matricNo == 2023002524){
-                window.location.href='Adekunjo Emmanuel Ayomide.html'
-            }else if (matricNo == 2023004947){
-                window.location.href='ADELEYE, Oluwaferanmi.html'
-            }else if (matricNo == 2023010703){
-                window.location.href='Adebowale Victor Oladayo.html'
-            }else if (matricNo == 2023002857){
-                window.location.href='Adebisi ishaq Ayomide.html'
-            }else if (matricNo == 2023006202){
-                window.location.href='Adelusi Desmond.html'
-            }else if (matricNo == 2023008891){
-                window.location.href = 'Adekoya Anjolaoluwa.html'
-            }else if (matricNo == 2023005814){
-                window.location.href='Adekunle Abdulhameed.html'
-            }else if (matricNo == 2023004212){
-                window.location.href="adeola.html"
-            }else if (matricNo == 2023009597){
-                window.location.href='Ademola Christopher.html'
-            }else if (matricNo == 2023007238){
-                window.location.href = "Adelaja Abraham Ayomide.html"
-            }else if (matricNo == 2023008411){
-                window.location.href= "emmanuel jeremiah.html"
-            }else{
-                console.error("Invalid matric number");
-            }
+        if(matricNo == `${retrievedData[0].matric}` && password == `${retrievedData[0].password}`){
+            window.location.href = 'home.html'
         }
     }
 }

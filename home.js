@@ -1,3 +1,8 @@
+function updateGMTTime() {
+    const timeDateInNigeria = new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
+    dateTimeDisplay.innerHTML=(timeDateInNigeria);
+}
+setInterval(updateGMTTime, 1000);
 let retrievedData = JSON.parse(localStorage.getItem("data")) || [];
 console.log(retrievedData);
 

@@ -59,6 +59,7 @@ function submit() {
             locate: location,
         }); 
         console.log('Form data:', database);
+        window.location.href='login.html'
         localStorage.setItem("data", JSON.stringify(database));
     }
     // Clear the form fields
