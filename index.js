@@ -33,18 +33,6 @@ function submit() {
         alert('Fill up the spaces correctly')
     } 
     else {
-        document.getElementById('fileInput').addEventListener('change', function() {
-            const file = this.files[0];
-            const reader = new FileReader();
-    
-            reader.onload = function(event) {
-                const base64String = event.target.result;
-                localStorage.setItem('image', base64String);
-                console.log('Image saved in localStorage');
-            };
-    
-            reader.readAsDataURL(file);
-        });
         database.push({
             fullName: fullNameInpt,
             email: emailInpt,

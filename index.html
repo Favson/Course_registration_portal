@@ -33,6 +33,13 @@
             <i>already have an account? <a href="login.html">login</a></i>
         </form>
     </div>
-    <script src="index.js" defer></script>
+    <script src="index.js"></script>
+    <script type="module">
+
+        document.getElementById('signUpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            submit();
+        });
+    </script>
 </body>
 </html>
