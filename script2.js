@@ -27,12 +27,12 @@ function registerCourses() {
     if(inputName.value === "" || matricNumber.value ===""){
         document.getElementById('err').style.display='block'
         document.getElementById('incorrect').style.display='none'
-    }else if (inputName != `${registerCourses[0].matric}` || matricNumber != `${registerCourses[0].password}`){
+    }else if (inputName != `${retrievedData[0].matric}` || matricNumber != `${registerCourses[0].password}`){
         document.getElementById('incorrect').style.display='block'
         document.getElementById('err').style.display='none'
     }else if (matricNumber.length >10 || matricNumber.length < 10){
         alert('Incorrect Credential')
-    } else if(document.getElementById('checkBox').checked.length =  9){
+    }else{
         localStorage.setItem('name', inputName);
         localStorage.setItem('matric', matricNumber)
         window.location.href = 'display.html';

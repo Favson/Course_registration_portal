@@ -67,3 +67,9 @@ input[type="submit"] {
     color: #ffffff;
 
 }
+
+@media (max-width: 476px) {
+ .container{
+    width: 100%;
+ }   
+}
