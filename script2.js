@@ -1,9 +1,12 @@
+let retrievedData = JSON.parse(localStorage.getItem("data")) || [];
+console.log(retrievedData);
 let details = []
 //Calling out the id needed and saving them in a new variable
 let display = document.getElementById('display')
 let checkBox = document.getElementById('checkBox')
 let checkboxes = document.querySelectorAll('input[type="checkbox"]')
-let count = 0;  
+let count = 0;
+
 //For the checkbox to count all the box checked       
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener('change', () => {
@@ -16,7 +19,7 @@ checkboxes.forEach(checkbox => {
     });
 });
 
-let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
+
 //Function to know the registered courses and to make sure it's 9 courses registered 
 function registerCourses() {
     let inputName = document.getElementById('inputName').value;
@@ -24,7 +27,7 @@ function registerCourses() {
     if(inputName.value === "" || matricNumber.value ===""){
         document.getElementById('err').style.display='block'
         document.getElementById('incorrect').style.display='none'
-    }else if (!studentMatric){
+    }else if (inputName != `${registerCourses[0].matric}` || matricNumber != `${registerCourses[0].password}`){
         document.getElementById('incorrect').style.display='block'
         document.getElementById('err').style.display='none'
     }else if (matricNumber.length >10 || matricNumber.length < 10){
