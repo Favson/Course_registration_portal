@@ -70,6 +70,6 @@ input[type="submit"] {
 
 @media (max-width: 476px) {
  .container{
-    width: 100%;
+    width: 80%;
  }   
 }
