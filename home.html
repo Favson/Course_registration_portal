@@ -17,6 +17,7 @@
         .navbar{
             position: fixed;
             z-index: 1;
+            margin-top: -30px;
             width: 100%;
         }
         .arrowDiv {
@@ -187,7 +188,7 @@
                 <div class="arrowDiv" id="arrowDiv" onclick="arrowDiv()"><img src="Images/click-removebg-preview.png" alt="" width="20%"></div>
             </form>
             <div class="rightImage">
-                <img src="Images/mypic.jpg" alt="" class="imageRightTop img-fluid">
+                <img id="storedImage1" alt="Stored Image" class="imageRightTop img-fluid">
                 <span class="spanActive"></span>
             </div>
         </div>
@@ -231,13 +232,13 @@
             <p id="dateTimeDisplay" class="pt-3" style="margin-bottom: -15px;"></p>
             <div class="w-lg-100  w-sm-100 mx-auto" style="padding-top:25px;">
                 <img src="Images/background.jpg" alt="" width="100%" style="border-radius: 15px;" class="imgBackground">
-                <div style="border: white;"><img src="Images/mypic.jpg" alt="" class="imageSpan" id="studentImg">
+                <div style="border: white;"><img id="storedImage" alt="Stored Image" class="imageSpan">
                 <span class="spanActive2"></span> 
                 </div>
-                <h5 style="font-weight: 700;" class="text-center" id="studentName1">ADEBISI FAVOUR MOMOOLUWA </h5>
+                <h5 style="font-weight: 700;text-transform: uppercase" class="text-center" id="studentName1"></h5>
                 <div class="text-center">
-                    <span class="mx-a"><img src="Images/comput_info-removebg-preview.png" alt="" class="imgUser"> COMPUTING AND INFORMATICS</span>
-                    <span class="text-center"><img src="Images/location-removebg-preview.png" class="imgUser" alt=""> OYO, NIGERIA</span>
+                    <span class="mx-a"><img src="Images/comput_info-removebg-preview.png" alt="" class="imgUser"><span id="faculty" style="text-transform: uppercase;"></span></span>
+                    <span class="text-center"><img src="Images/location-removebg-preview.png" class="imgUser" alt=""> <span id="locate" style="text-transform: uppercase;"></span></span>
                     <span><img src="Images/Current-removebg-preview.png" class="imgUser" alt=""> CURRENT</span>
                 </div>
 
@@ -246,21 +247,21 @@
                         <div class="col-lg-4 col-sm-12">
                             <div class="academic shadow my-4 ps-3" style="border-radius:10px;height:70px;padding-top:10px;font-weight:500" >
                                 <p style="margin-bottom: -3px;">Academic Session: <a href="" style="text-decoration: none;">2023/2024</a></p>
-                                <p>Semester: <a href="" style="text-decoration: none;">Harmattan</a></p>
+                                <p>Semester: <a href="" style="text-decoration: none; text-transform:capitalize" id="semester"></a></p>
                             </div>
                             <div class="shadow my-4 ps-3" style="border-radius:10px;padding-top:10px; padding-bottom:50px" >
                                 <p style="font-size: large;">Profile</p>
                                 <hr>
                                 <small class="text-secondary" style="font-size:x-small;">ABOUT</small>
-                                <p class="d-flex"><img src="Images/contact-removebg-preview.png" width="6%" height="22vh" alt="" class="me-2"><span class="w-100" id="studentName">ADEBISI FAVOUR MOMOOLUWA</span></p>
-                                <p><i class="fa-regular fa-envelope-open me-3"></i>CYBER SECURITY SCIENCE</p>
-                                <p><img src="Images/comput_info-removebg-preview.png" width="7%" alt="" class="me-2"> COMPUTING AND INFORMATICS</p>
+                                <p class="d-flex"><img src="Images/contact-removebg-preview.png" width="6%" height="22vh" alt="" class="me-2"><span class="w-100" id="studentName" style="text-transform: uppercase;"></span></p>
+                                <p><i class="fa-regular fa-envelope-open me-3"></i><span style="text-transform: uppercase;" id="dept"></span></p>
+                                <p><img src="Images/comput_info-removebg-preview.png" width="7%" alt="" class="me-2"><span style="text-transform:uppercase" id="faculty1"></span></p>
                                 <!-- <br> -->
                                 <small class="text-secondary" style="font-size:x-small;">CONTACT</small>
-                                <p ><h6 class="text-secondary d-inline"><i class="fa-solid fa-at"></i></h6>  <span id="studentEmail">favouradebisi74@gmail.com</span></p>
-                                <p id="studentNo"><i class="me-2 fa-solid fa-mobile-screen-button"></i>09157403668</p>
+                                <p ><h6 class="text-secondary d-inline"><i class="fa-solid fa-at"></i></h6>  <span id="studentEmail"></span></p>
+                                <p id="studentNo"><i class="me-2 fa-solid fa-mobile-screen-button"></i><span id="phoneNumber1"></span></p>
                                 <small class="text-secondary" style="font-size:x-small;">ACADEMIC INFORMATION</small>
-                                <p>Matric Number: 2023008625</p>
+                                <p>Matric Number: <span id="matricNo"></span></p>
                                 <hr>
                                 <button class="btn" style="background-color: #09a5be; border:none; width:50%; color:white">More Details</button>
                             </div>
@@ -273,7 +274,7 @@
                             </div>
                             <hr>
                             <div>
-                                <p><img src="Images/Cyn.png" width="10%" alt=""><a href="" style="text-decoration: none; font-weight:500" class="">CYB - 2023/2024</a></p>
+                                <p><img src="Images/Cyn.png" width="10%" alt=""><a href="" style="text-decoration: none; font-weight:500" class=""><span id="abb" style="text-transform: uppercase;"></span> - 2023/2024</a></p>
                                 <small class="text-secondary ms-5">100H | Enrolled Courses 9 | Units 18 <p class="px-3 " style="background-color:#e5f9f6;border-radius:20px;display:inline; font-size: 10px; color:#00c9a7"><span style="background-color: #00c9a7;border-radius:50%;font-size:xx-small">oo</span> "Completed"</p><br>
                                 <small class="text-secondary ms-5">29/04/2024</small><br>
                                 <button class="btn w-25 my-4 ms-5 border border-danger text-danger bg-white">Print</button>
@@ -286,8 +287,10 @@
         </div>
     </main>
 </body>
-<script src="script.js"></script>
+<script src="home.js"></script>
 <script>
+
+
     let slideOut = document.getElementById('slideOut')
     function arrowDiv() {
             document.getElementById('arrowDiv').innerHTML=`<img src="Images/click-backward.png" alt="" width="20%" onclick="backwardArrow()">`

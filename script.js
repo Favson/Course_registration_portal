@@ -1,15 +1,7 @@
-
-//TimeShow
-function updateGMTTime() {
-    const timeDateInNigeria = new Date().toLocaleString('en-NG', {timeZone: 'Africa/Lagos'});  
-    dateTimeDisplay.innerHTML=(timeDateInNigeria);
-}
-setInterval(updateGMTTime, 1000);
-
 let studentMatric =[2023008625, 2023007271, 2023006202, 2023007238, 2023002857,2023008028, 2023010703, 2023004212, 2023002427, 2023002524, 2023010465, 2023011681, 2023003139, 2023008891, 2023008239, 2023011299, 2023004947, 2023005814]
 //The Login Button
 function login(){
-    button.innerText=`Processing...` 
+    button.innerText="Processing...";
     setTimeout(() => {
         button.innerHTML="Login"
     }, 1000);
@@ -19,19 +11,20 @@ function login(){
     let matricPass = document.getElementById('matricPass')
     let matricPass2 = document.getElementById('matricPass2')
     let matricPattern = /^2023/;
-    let PassPhrase = "CybGroup2Project"
 
     if (password.value ==="" || matricNo ===""){
         matricPass.style.display='block';
         matricPass2.style.display='block';
         matricPass1.style.display='none'
         document.getElementById('password').value=""
-    }else if (!matricPattern.test(matricNo) && !studentMatric && matricNo.length > 10 && matricNo.length < 10 && password.value > 11 && password != PassPhrase){
-        document.getElementById('password').value=""
-        matricPass1.style.display='block'
-        matricPass.style.display='none';
-        matricPass2.style.display='none';
-    }else{
+    }
+    // }else if (!matricPattern.test(matricNo) && !studentMatric && matricNo.length > 10 && matricNo.length < 10 && password.value > 11 && password != PassPhrase){
+    //     document.getElementById('password').value=""
+    //     matricPass1.style.display='block'
+    //     matricPass.style.display='none';
+    //     matricPass2.style.display='none';
+    // }
+    else{
         document.getElementById('loading').style.display="block"
         setTimeout(() => {
             document.getElementById('loading').style.display='none'
@@ -113,10 +106,3 @@ function resetCode() {
     emailError.style.display='none'
    }
 }
-
-
-
-
-
-//Homepage Scripts
-
