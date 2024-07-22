@@ -25,8 +25,8 @@ document.getElementById('inputSpan1').innerText = `${retrievedData[0].fullName}`
 document.getElementById('inputSpan2').innerText = `${retrievedData[0].matric}`;
 
 function registerCourses() {
-    if (document.get)
-        window.location.href = 'scratch.html';
+    if (count > 0){
+        window.location.href = 'scractch.html';
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const selectedCourses = Array.from(form.elements['course'])
@@ -36,4 +36,7 @@ function registerCourses() {
     document.getElementById('inputName').value=''
     document.getElementById('matricNumber').value="" 
     count="" 
+    }else{
+        return;
+    }
 }
