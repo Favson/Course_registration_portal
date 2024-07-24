@@ -3,8 +3,10 @@ console.log(retrievedData);
 let details = []
 //Calling out the id needed and saving them in a new variable
 let display = document.getElementById('display')
+let cyb101 = document.getElementById('cyb101')
 let checkBox = document.getElementById('checkBox')
-let checkboxes = document.querySelectorAll('input[type="checkbox"]')
+let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+let values = document.getElementById('tr1');
 let count = 0;
 
 //For the checkbox to count all the box checked       
@@ -26,7 +28,11 @@ document.getElementById('inputSpan2').innerText = `${retrievedData[0].matric}`;
 
 function registerCourses() {
     if (count > 0){
-        window.location.href = 'scractch.html';
+        if (values){
+
+        }
+        localStorage.setItem('cyb', )
+        window.location.href = 'display.html';
         document.getElementById('incorrect').style.display='none'
         document.getElementById('err').style.display='none'
         const selectedCourses = Array.from(form.elements['course'])
